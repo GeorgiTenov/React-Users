@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(219, 60, 20);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.user{
+  background-color: rgb(49, 70, 49);
+  list-style: none;
+  margin:10px;
+
+}
+.users-ul{
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  background-color: rgb(54, 8, 8);
+  margin:40px;
+  padding:50px;
+  list-style: none;
+}
+
+.users-ul li{
+  margin:40px;
+  transition-duration:1s;
+}
+
+.users-ul li:hover{
+  box-shadow:10px 10px 10px black;
+  cursor: pointer;
+}
+.users img:hover, .user-img:hover{
+  box-shadow:10px 10px 10px black;
+  cursor: pointer;
+}
+
+.user-img{
+  animation:rot 3s;
+  border-radius: 30%;
+}
+
+.add-user{
+  background-color: rgb(51, 26, 26);
+  text-decoration: none;
+  color:white;
+  font-size:30px;
+  width:100%;
+  border-radius: 10%;
+  font-family: 'Syne Mono', monospace;
+}
+
+
+
+.add-user-container{
+  background: rgb(41, 59, 49);
+  text-align: center;
+  justify-content: center;
+  border-radius:30%;
+  
+}
+
+.style1{
+  background-color:rgb(185, 4, 4);
+}
+
+.style2{
+  background-color: chartreuse;
+}
+
+.style3{
+  background-color: coral;
+}
+
+/* Form */
+.form-container{
+  background-color: rgb(71, 61, 40);
+  border-radius:30%;
+  justify-content: center;
+  text-align: center;
+}
+.form input{
+  margin:10px;
+}
+
+.delete{
+  background-color: rgb(205, 165, 90);
+  color:rgb(97, 16, 16);
+  font-size: 20px;
+  font-family: 'Cormorant Unicase', serif;
+  transition-property:background-color;
+  transition: 1s;
+}
+
+.name{
+  font-size: 20px;
+  font-family: 'Averia Serif Libre', cursive;
+}
+
+.submit{
+  font-family: 'Anton', sans-serif;
+  font-size:25px;
+  color:white;
+  background-color: black;
+  transition-property:background-color;
+  transition: 2s;
+}
+/* hovers */
+
+.delete:hover{
+  background-color: rgb(241, 169, 13);
+}
+
+.submit:hover{
+  background-color: slategrey;
+  cursor: pointer;
+}
+
+/* Responsive style */
+@media screen and (max-width:1000px){
+  .users-ul{
+    display:inline-block;
+  }
+}
+
+
+/* animations */
+
+@keyframes rot{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
 }
